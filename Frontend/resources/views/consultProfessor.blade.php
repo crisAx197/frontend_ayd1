@@ -62,7 +62,7 @@
             const dpi = document.getElementById('dpi').value;
             console.log('Consultar docente con DPI:', dpi);
 
-            fetch(`http://localhost:3000/usuarios/profesores/${dpi}`)
+            fetch(`http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/profesores/${dpi}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('No se encontró el docente con DPI ' + dpi);

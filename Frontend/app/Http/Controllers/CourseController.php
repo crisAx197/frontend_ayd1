@@ -16,7 +16,7 @@ class CourseController extends Controller
         $creditos = intval($request->creditos);
         $requisito_creditos = intval($request->requisito_creditos);
 
-        $response = Http::post('http://localhost:3000/cursos', [
+        $response = Http::post('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/cursos', [
             'Codigo' => $codigo,
             'Nombre' => $nombre,
             'Creditos' => $creditos,
@@ -35,7 +35,7 @@ class CourseController extends Controller
         $studentId = $request->studentId;
         $courseId = intval($request->courseId);
     
-        $response = Http::post("http://localhost:3000/usuarios/estudiantes/{$studentId}/cursos/asignar", [
+        $response = Http::post("http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/estudiantes/{$studentId}/cursos/asignar", [
             'Id_curso_asignacion' => $courseId,
         ]);
     
@@ -51,7 +51,7 @@ class CourseController extends Controller
         $courseId = $request->courseId; 
         $studentId = Session::get('Id');
     
-        $response = Http::delete("http://localhost:3000/usuarios/estudiantes/{$studentId}/cursos/desasignar/{$courseId}");
+        $response = Http::delete("http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/estudiantes/{$studentId}/cursos/desasignar/{$courseId}");
     
         if ($response->successful()) {
             return redirect('/homeUser')->with('success', 'Curso desasignado exitosamente.');

@@ -61,7 +61,7 @@
 
 
     <script>
-        fetch('http://localhost:3000/cursos/asignaciones')
+        fetch('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/cursos/asignaciones')
             .then(response => response.json())
             .then(courses => {
                 const courseSelect = document.getElementById('courseId');

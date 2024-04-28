@@ -131,7 +131,7 @@
                 }
             };
 
-            fetch(`http://localhost:3000/cursos/asignaciones/${idAssignment}/horario`, {
+            fetch(`http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/cursos/asignaciones/${idAssignment}/horario`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -60,7 +60,7 @@
             asignacionSelect.innerHTML = '<option value="">Seleccionar asignación</option>';
 
             try {
-                const response = await fetch('http://localhost:3000/cursos/asignaciones/');
+                const response = await fetch('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/cursos/asignaciones/');
                 if (!response.ok) {
                     throw new Error('Error al cargar las asignaciones');
                 }
@@ -85,7 +85,7 @@
             }
 
             try {
-                const response = await fetch(`http://localhost:3000/cursos/asignaciones/${asignacionId}/estudiantes`);
+                const response = await fetch(`http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/cursos/asignaciones/${asignacionId}/estudiantes`);
                 if (!response.ok) {
                     throw new Error('Error al consultar los estudiantes por asignación');
                 }

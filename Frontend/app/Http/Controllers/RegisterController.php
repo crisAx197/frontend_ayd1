@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $direccion = strval($request->direccion);
         $dpi = intval($request->dpi);
 
-        $response = Http::post('http://localhost:3000/usuarios/register', [
+        $response = Http::post('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/register', [
             'nombre' => $nombre,
             'email' => $email,
             'password' => $password,
@@ -58,7 +58,7 @@ class RegisterController extends Controller
         $dpi = intval($request->dpi);
         $carrera = strval($request->carrera);
 
-        $response = Http::post('http://localhost:3000/usuarios/register', [
+        $response = Http::post('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/register', [
             'nombre' => $nombre,
             'email' => $email,
             'password' => $password,

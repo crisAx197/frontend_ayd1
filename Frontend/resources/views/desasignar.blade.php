@@ -64,7 +64,7 @@
     <script>
         function refreshCourses(dpi) {
             console.log('DPI del estudiante:', dpi);
-            fetch(`http://localhost:3000/usuarios/estudiantes/${dpi}/cursos/`)
+            fetch(`http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/estudiantes/${dpi}/cursos/`)
                 .then(response => response.json())
                 .then(courses => {
                     const courseSelect = document.getElementById('courseId');

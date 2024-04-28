@@ -61,7 +61,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             
-            fetch('http://localhost:3000/carreras')
+            fetch('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/carreras')
                 .then(response => response.json())
                 .then(data => {
                     const carreraSelect = document.getElementById('carrera');
@@ -83,7 +83,7 @@
             const carreraId = document.getElementById('carrera').value;
             console.log('Consultar cursos de carrera con ID:', carreraId);
 
-            fetch(`http://localhost:3000/carreras/${carreraId}/cursos`)
+            fetch(`http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/carreras/${carreraId}/cursos`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('No se encontraron cursos para esta carrera.');

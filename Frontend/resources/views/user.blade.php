@@ -122,7 +122,7 @@
     <script>
         const carreraSelect = document.querySelector('select[name="carrera"]');
 
-        fetch('http://localhost:3000/carreras')
+        fetch('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/carreras')
             .then(response => response.json())
             .then(carreras => {
                 carreras.forEach(carrera => {

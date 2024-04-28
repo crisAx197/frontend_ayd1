@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $response = Http::post('http://localhost:3000/usuarios/login', [
+        $response = Http::post('http://ec2-100-27-128-166.compute-1.amazonaws.com:3000/usuarios/login', [
             'carnet' => $request->carnet,
             'password' => $request->password
         ]);
